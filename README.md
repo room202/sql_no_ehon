@@ -41,7 +41,7 @@ port= 3306
 ～省略～
 # The MySQL server
 [mysqld]
-character-set-server = utf8
+character-set-server = utf8  # ← このように追加
 port= 3306
 ～省略～
 ```
