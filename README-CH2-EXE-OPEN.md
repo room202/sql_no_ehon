@@ -7,12 +7,6 @@
 **指示：**  
 以下のSQLを使って、演習用のデータベース `training_db` を作成し、使用するデータベースを切り替えなさい。
 
-```sql
-CREATE DATABASE training_db;
-
-USE training_db;
-```
-
 ---
 
 ## 問題②：社員テーブルの作成
@@ -23,14 +17,6 @@ USE training_db;
 - `id`：INT型、主キー  
 - `name`：VARCHAR(30)、NULL不可  
 - `email`：VARCHAR(100)、一意（UNIQUE）
-
-```sql
-CREATE TABLE employees (
-  id INT PRIMARY KEY,
-  name VARCHAR(30) NOT NULL,
-  email VARCHAR(100) UNIQUE
-);
-```
 
 ---
 
@@ -44,12 +30,6 @@ CREATE TABLE employees (
 | 1  | 田中一郎 | ichiro.tanaka@example.com |
 | 2  | 山本花子 | hanako.yamamoto@example.com |
 
-```sql
-INSERT INTO employees (id, name, email)
-VALUES
-  (1, '田中一郎', 'ichiro.tanaka@example.com'),
-  (2, '山本花子', 'hanako.yamamoto@example.com');
-```
 
 ---
 
@@ -58,10 +38,6 @@ VALUES
 **指示：**  
 名前が「田中一郎」の社員情報を検索しなさい。
 
-```sql
-SELECT * FROM employees
-WHERE name = '田中一郎';
-```
 
 ---
 
@@ -70,11 +46,6 @@ WHERE name = '田中一郎';
 **指示：**  
 `employees` テーブルの全データをメールアドレス順に並べ、最初の1件だけを表示しなさい。
 
-```sql
-SELECT * FROM employees
-ORDER BY email
-LIMIT 1;
-```
 
 ---
 
@@ -87,12 +58,3 @@ LIMIT 1;
 - `title`：VARCHAR(50)、画像のタイトル（例：「社員証」など）  
 - `image_data`：BLOB型（画像データ）
 
-```sql
-CREATE TABLE photos (
-  photo_id INT PRIMARY KEY,
-  title VARCHAR(50),
-  image_data BLOB
-);
-```
-
-> ※この段階では画像ファイルの挿入は行わず、テーブル作成のみとします。
