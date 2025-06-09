@@ -6,8 +6,8 @@ https://www.shoeisha.co.jp/book/detail/9784798159539
 
 ## 開発環境
 
-- [XAMPP Ver8.2.12(zip 版)](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16.zip/download)
-- [DBeaver](https://dbeaver.io/)
+-   [XAMPP Ver8.2.12(zip 版)](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16.zip/download)
+-   [DBeaver](https://dbeaver.io/)
 
 ## 事前準備
 
@@ -50,4 +50,6 @@ port= 3306
 
 ## 第１章　データベースとは
 
-## [第２章 SQLの基礎](Chapter02/README.md)
+## [第２章 SQL の基礎](Chapter02/README.md)
+
+## [第３章 演算子](Chapter03/README.md)
