@@ -50,6 +50,6 @@ port= 3306
 
 ## 第１章　データベースとは
 
-## [第２章 SQL の基礎](Chapter02/README.md)
+## [第２章　SQLの基礎](Chapter02/README.md)
 
-## [第３章 演算子](Chapter03/README.md)
+## [第３章　演算子](Chapter03/README.md)
