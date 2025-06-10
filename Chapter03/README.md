@@ -58,3 +58,17 @@ INSERT INTO tbl_bookprice (code, title, price) VALUES (1, 'Cの絵本', 1380);
 INSERT INTO tbl_bookprice (code, title, price) VALUES (2, 'Javaの絵本', 1580);
 INSERT INTO tbl_bookprice (code, title) VALUES (3, 'SQLの絵本');
 ```
+
+## P.44
+
+```sql
+USE db_ehon;
+SELECT name, (score_kokugo + score_eigo) AS sum FROM tbl_exam
+```
+
+## P.45
+
+```sql
+USE db_ehon;
+SELECT name, (score_kokugo + score_eigo) / 2 AS average FROM tbl_exam ORDER BY average DESC;
+```
