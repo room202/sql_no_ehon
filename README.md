@@ -52,4 +52,6 @@ port= 3306
 
 ## [第２章　SQLの基礎](Chapter02/README.md)
 
+[2章 SQLの基礎 演習問題]()
+
 ## [第３章　演算子](Chapter03/README.md)
