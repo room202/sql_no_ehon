@@ -7,7 +7,6 @@ https://www.shoeisha.co.jp/book/detail/9784798159539
 ## 開発環境
 
 -   [XAMPP Ver8.2.12(zip 版)](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16.zip/download)
--   [DBeaver](https://dbeaver.io/)
 
 ## 事前準備
 
