@@ -17,10 +17,6 @@
 
 ---
 
-## 🧩 第2章：SQLの基礎（全13問）
-
----
-
 ### 問題1  
 データベース `employee_db` を作成してください。
 
@@ -185,10 +181,6 @@ INT
 ```sql
 SELECT * FROM employee WHERE hire_date IS NOT NULL;
 ```
-
----
-
-## 🧮 第3章：演算子（全9問）
 
 ---
 
