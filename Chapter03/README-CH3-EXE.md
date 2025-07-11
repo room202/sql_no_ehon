@@ -176,7 +176,9 @@ INSERT INTO employees (id, name, age, salary, department, email) VALUES
 
 **結果（例）**
 
-該当なし（0 行）
+| name     | age | department | salary | 年収 |
+| -------- | ---------- | --- | ------ | ---- |
+| 村田博    | 29         | 開発 | 430000 | 5160000 |
 
 ---
 
