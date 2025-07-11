@@ -162,6 +162,7 @@ INSERT INTO employees (id, name, age, salary, department, email) VALUES
 | name     | department | age | salary |
 | -------- | ---------- | --- | ------ |
 | 鈴木花子 | 開発       | 35  | 450000 |
+| 高橋一郎 | 開発       | 41  | 500000 |
 | 佐藤美咲 | 営業       | 31  | 380000 |
 
 ---
