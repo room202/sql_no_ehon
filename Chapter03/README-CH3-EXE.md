@@ -149,6 +149,7 @@ INSERT INTO employees (id, name, age, salary, department, email) VALUES
 | 鈴木花子 | 開発       |
 | 高橋一郎 | 開発       |
 | 佐藤美咲 | 営業       |
+| 村田博  | 開発        |
 
 ---
 
