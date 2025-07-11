@@ -37,6 +37,7 @@ INSERT INTO employees (id, name, age, salary, department, email) VALUES
 | 高橋一郎 | 6000000 |
 | 山田太郎 | 3480000 |
 | 佐藤美咲 | 4560000 |
+| 村田博 | 5160000 |
 
 ---
 
@@ -48,13 +49,14 @@ INSERT INTO employees (id, name, age, salary, department, email) VALUES
 
 **結果（例）**
 
-| name     | 日給  |
-| -------- | ----- |
-| 佐藤健   | 10666 |
-| 鈴木花子 | 15000 |
-| 高橋一郎 | 16666 |
-| 山田太郎 | 9666  |
-| 佐藤美咲 | 12666 |
+| name     | 日給  | 日給切り捨て |
+| -------- | ----- | ----------- |
+| 佐藤健   | 10666.6667 | 10666 | 
+| 鈴木花子 | 15000.0000 | 15000 |
+| 高橋一郎 | 16666.6667 | 16666 |
+| 山田太郎 | 9666.6667 | 9666  |
+| 佐藤美咲 | 12666.6667 | 12666 |
+| 村田博   | 14333.3333 | 14333 |
 
 ---
 
@@ -86,6 +88,7 @@ INSERT INTO employees (id, name, age, salary, department, email) VALUES
 | -------- | ---------- |
 | 鈴木花子 | 開発       |
 | 高橋一郎 | 開発       |
+| 村田博 | 開発       |
 
 ---
 
@@ -102,6 +105,7 @@ INSERT INTO employees (id, name, age, salary, department, email) VALUES
 | 鈴木花子 | 開発       |
 | 高橋一郎 | 開発       |
 | 山田太郎 | 総務       |
+| 村田博 | 開発       |
 
 ---
 
