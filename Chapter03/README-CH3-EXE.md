@@ -18,7 +18,8 @@ INSERT INTO employees (id, name, age, salary, department, email) VALUES
 (2, '鈴木花子', 35, 450000, '開発', NULL),
 (3, '高橋一郎', 41, 500000, '開発', 'takahashi@example.com'),
 (4, '山田太郎', 24, 290000, '総務', NULL),
-(5, '佐藤美咲', 31, 380000, '営業', 'misaki@example.com');
+(5, '佐藤美咲', 31, 380000, '営業', 'misaki@example.com'),
+(6, '村田博', 29, '430000', '開発', 'murata@example.jp');
 ```
 
 ## 演習 01: 年収の算出
