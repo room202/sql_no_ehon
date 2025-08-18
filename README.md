@@ -56,3 +56,5 @@ port= 3306
 ## [第３章 演算子](Chapter03/README.md)
 
 [演習問題](Chapter03/README-CH3-EXE.md)
+
+## [第４章 関数](Chapter04/README.md)
