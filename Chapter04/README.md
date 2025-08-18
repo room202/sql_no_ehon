@@ -68,3 +68,87 @@ INSERT INTO tbl_schedule(time) VALUES ('12 29 2003 8:50AM');
 INSERT INTO tbl_schedule(time) VALUES ('02 06 2004 12:46AM');
 INSERT INTO tbl_schedule(time) VALUES ('06 30 2005 1:29PM');
 ```
+
+## 第４章はここがkey
+
+## 関数とは
+
+## 数値関数(1)
+
+### CEILING関数、CEIL関数
+
+小数点以下切り上げ
+
+```sql
+SELECT CEILING(55.44);
+-- 結果
+-- 56
+```
+
+### FLOOR関数
+
+小数点以下切り捨て
+
+```sql
+SELECT FLOOR(2.58);
+-- 結果
+-- 2
+```
+
+```sql
+USE db_ehon;
+
+SELECT
+    atai,
+    CEILING(atai) AS kekka1,
+    FLOOR(atai) AS kekka2
+FROM
+    tbl_snum;
+```
+
+## 数値関数(2)
+
+### RAND関数
+
+0以上1.0未満の範囲の乱数を取得する
+
+```sql
+SELECT RAND(6);
+```
+
+```sql
+SELECT RAND();
+SELECT RAND();
+SELECT RAND(7);
+SELECT RAND(7);
+```
+
+### その他の数値関数
+
+※ ROUNDだけを紹介
+
+```sql
+SELECT ROUND(3.4, 0);
+-- 3
+SELECT ROUND(3.5, 0);
+-- 4
+```
+
+#### 桁数の指定
+
+```sql
+SELECT ROUND(123.456789, 3);
+-- 123.457
+SELECT ROUND(123.456789, 2);
+-- 123.46
+SELECT ROUND(123.456789, 1);
+-- 123.5
+SELECT ROUND(123.456789, 0);
+-- 123
+SELECT ROUND(123.456789, -1);
+-- 120
+SELECT ROUND(123.456789, -2);
+-- 100
+SELECT ROUND(123.456789, -3);
+-- 0
+```
