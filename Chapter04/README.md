@@ -203,3 +203,186 @@ FROM
 ```
 
 ### UPPER関数、LOWER関数
+
+```sql
+SELECT UPPER('sqlの絵本');
+-- SQLの絵本
+
+SELECT LOWER('SQLの絵本');
+-- sqlの絵本
+```
+
+```sql
+SELECT sname, LOWER(sname) AS komoji FROM tbl_stdname;
+SELECT fname, UPPER(sname) AS oomoji FROM tbl_stdname;
+```
+
+## 日付関数(1)
+
+### 現在の日時を取得する
+
+```sql
+-- MySQL, Oracle
+SELECT SYSDATE();
+
+-- SQL Server
+-- SELECT GETDATE();
+
+-- PostgreSQL
+-- SELECT NOW();
+```
+
+### 日付データから、日、月、年を取得する
+
+```sql
+CREATE TABLE tbl_date (jikoku DATETIME);
+
+INSERT INTO tbl_date (jikoku) VALUES (SYSDATE());
+
+SELECT * FROM tbl_date;
+SELECT DAY(jikoku) FROM tbl_date;
+
+SELECT
+    jikoku,
+    YEAR(jikoku) AS '年',
+    MONTH(jikoku) AS '月',
+    DAY(jikoku) AS '日',
+    HOUR(jikoku) AS '時',
+    MINUTE(jikoku) AS '分',
+    SECOND(jikoku) AS '秒'
+FROM
+    tbl_date;
+```
+
+## 日付関数(2)
+
+### 日数、時間数を加算する
+
+```sql
+-- MySQL
+-- +1日
+SELECT DATE_ADD('2025-08-31', INTERVAL 1 DAY);
+-- +1時間
+SELECT DATE_ADD('2025-08-31 09:00:00', INTERVAL 1 HOUR);
+-- +1ヶ月
+SELECT DATE_ADD('2025-08-31', INTERVAL 1 MONTH);
+-- +1年
+SELECT DATE_ADD('2025-08-31', INTERVAL 1 YEAR);
+```
+
+### 日付の差を取得する
+
+```sql
+SELECT DATEDIFF('2025-09-10', '2025-08-29');
+-- 12
+```
+
+```sql
+SELECT DATE_ADD(date1, INTERVAL 6 MONTH) FROM tbl_datelist WHERE no = 1;
+SELECT DATEDIFF(date2, date1) FROM tbl_datelist WHERE no = 2;
+SELECT DATEDIFF(SYSDATE(), '2019-01-01');
+SELECT DATEDIFF('2019-01-01', SYSDATE());
+```
+
+## 集約関数(1)
+
+### 主な集約関数
+
+```sql
+SELECT
+    AVG(score) AS average,
+    SUM(score) AS total_score,
+    COUNT(name) AS game
+FROM
+    tbl_game;
+```
+
+```sql
+SELECT COUNT(DISTINCT name) as member FROM tbl_game;
+```
+
+## 集約関数(2)
+
+### MAX関数、MIN関数
+
+### グループ単位で処理を行う
+
+```sql
+SELECT
+    name,
+    MAX(score) AS high,
+    MIN(score) AS low
+FROM
+    tbl_game
+GROUP BY
+    name;
+```
+
+### 集約関数の結果を条件にしてデータを取り出す
+
+```sql
+SELECT
+    price,
+    COUNT(title)
+FROM
+    tbl_ehon
+GROUP BY
+    price
+HAVING
+    COUNT(title) = 1;
+```
+
+```sql
+SELECT
+    name,
+    SUM(score) AS over300
+FROM
+    tbl_game
+GROUP BY
+    name
+HAVING
+    (SUM(score) >= 300);
+```
+
+## 変換関数
+
+### CAST関数
+
+```sql
+SELECT CAST(0.245 AS CHAR);
+-- '0.245' (CHAR)
+
+-- SQL Server
+-- SELECT CAST(0.245 AS VARCHAR);
+
+SELECT CAST('2025-09-01' AS DATETIME);
+-- '2025-09-01 00:00:00' (DATETIME)
+``` 
+
+```sql
+SELECT
+    time AS mojiretsu,
+    STR_TO_DATE(time, '%m %d %Y %h:%i%p') AS hizuke1,
+    CAST(time AS DATETIME) AS hizuke2 -- MySQLだとNULLになる
+FROM
+    tbl_schedule;
+```
+
+## COLUMMN : ～ RDBMS 固有の関数 ～
+
+### DATENAME関数
+
+スキップ
+
+### LAST_DAY関数
+
+```sql
+SELECT LAST_DAY('2025-09-01');
+SELECT LAST_DAY('2025-10-01');
+SELECT LAST_DAY('2025-11-01');
+SELECT LAST_DAY('2025-12-01');
+```
+
+### POSITION関数
+
+スキップ
