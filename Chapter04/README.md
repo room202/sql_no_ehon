@@ -152,3 +152,54 @@ SELECT ROUND(123.456789, -2);
 SELECT ROUND(123.456789, -3);
 -- 0
 ```
+
+## 文字列関数(1)
+
+### LEN関数、LENGTH関数
+
+```sql
+SELECT LENGTH('しおり');
+-- 9 (UTF-8で3文字)
+```
+
+```sql
+SELECT LENGTH('サクラ　サク');
+SELECT sname, LENGTH(sname) AS kekka FROM tbl_stdname;
+```
+
+### SUBSTRING、SUBSTR関数
+
+```sql
+SELECT SUBSTRING('えほん', 2, 2);
+-- ほん
+```
+
+```sql
+SELECT fname, SUBSTRING(fname, 2, 2) AS kekka FROM tbl_stdname;
+```
+
+## 文字列関数(2)
+
+### LTRIM関数、RTRIM関数
+
+```sql
+SELECT LTRIM('  ABC');
+-- ABC
+SELECT RTRIM('ABC  ');
+-- ABC
+SELECT LTRIM(RTRIM('   ABC  '));
+-- ABC
+SELECT TRIM('   ABC  ');
+-- ABC
+```
+
+```sql
+SELECT
+    CONCAT('***', pname, '***') AS pname,
+    CONCAT('***', LTRIM(pname), '***') AS hidari,
+    CONCAT('***', RTRIM(pname), '***') AS migi
+FROM
+    tbl_pet;
+```
+
+### UPPER関数、LOWER関数
