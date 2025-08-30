@@ -59,4 +59,8 @@ port= 3306
 
 ## [第４章 関数](Chapter04/README.md)
 
+[演習問題](Chapter04/READEME-EXERCISES.md)
+
 ## [第５章 基本的なデータ操作](Chapter05/README.md)
+
+

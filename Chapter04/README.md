@@ -348,6 +348,24 @@ HAVING
 
 ### CAST関数
 
+#### CAST関数で使用できるデータ型一覧（MySQL）
+
+| 型カテゴリ  | 型名（CAST で使用可）                       | 補足・説明                         |
+| ------ | ----------------------------------- | ----------------------------- |
+| 数値型    | `SIGNED`                            | 符号付き整数（例: `INT` 相当）           |
+|        | `UNSIGNED`                          | 符号なし整数                        |
+|        | `DECIMAL[(M,D)]`                    | 固定小数点数                        |
+|        | `NUMERIC[(M,D)]`                    | `DECIMAL` の別名（同義）             |
+|        | `FLOAT`                             | 浮動小数点数                        |
+|        | `DOUBLE`                            | 倍精度浮動小数点数                     |
+| 文字列型   | `CHAR` または `CHAR(N)`                | 文字列型                          |
+|        | `BINARY` または `BINARY(N)`            | バイナリデータ型                      |
+| 日付・時刻型 | `DATE`                              | 日付（YYYY-MM-DD）                |
+|        | `DATETIME`                          | 日付＋時刻                         |
+|        | `TIME`                              | 時刻のみ                          |
+|        | `SIGNED INTEGER`（非公式で `INTEGER` も可） | `INT`のキャストにも使用可（推奨は `SIGNED`） |
+
+
 ```sql
 SELECT CAST(0.245 AS CHAR);
 -- '0.245' (CHAR)
